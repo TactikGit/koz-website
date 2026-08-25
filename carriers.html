@@ -7,7 +7,7 @@
   <meta name="description" content="Haul with KOZ Transit: fast digital setup, terms in writing before you load, one dispatcher per load, steady Canada–USA cross-border lanes. MC-1634322-B." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="koz.css?v=6" />
+  <link rel="stylesheet" href="koz.css?v=7" />
   <link rel="icon" type="image/svg+xml" href="assets/Orange.svg" />
   <link rel="apple-touch-icon" href="assets/Orange.png" />
   <meta name="theme-color" content="#E36314" />
@@ -51,7 +51,6 @@
         <li><a href="#requirements"><span lang="en">Requirements</span><span lang="fr">Exigences</span><span lang="es">Requisitos</span></a></li>
         <li><a href="#register"><span lang="en">Register</span><span lang="fr">Inscription</span><span lang="es">Registro</span></a></li>
       </ul>
-      <a href="portal.html" class="nav-portal"><span lang="en">Portal</span><span lang="fr">Portail</span><span lang="es">Portal</span></a>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -209,78 +208,33 @@
       <div>
         <h2><span lang="en">Get in the <span style="color:var(--orange);">rotation.</span></span><span lang="fr">Entrez dans la <span style="color:var(--orange);">rotation.</span></span><span lang="es">Entra en la <span style="color:var(--orange);">rotación.</span></span></h2>
         <p>
-          <span lang="en">Send the form and our carrier team reaches out within 24 hours to complete onboarding — most carriers are set up and eligible for loads within 24–48 hours.</span>
-          <span lang="fr">Envoyez le formulaire et notre équipe transporteurs vous contacte en moins de 24 heures pour compléter l'inscription — la plupart des transporteurs sont actifs en 24 à 48 heures.</span>
-          <span lang="es">Envía el formulario y nuestro equipo te contacta en menos de 24 horas para completar el alta — la mayoría queda activa en 24–48 horas.</span>
+          <span lang="en">Send an email and our carrier team reaches out within 24 hours to complete onboarding — most carriers are set up and eligible for loads within 24–48 hours.</span>
+          <span lang="fr">Écrivez-nous et notre équipe transporteurs vous contacte en moins de 24 heures pour compléter l'inscription — la plupart des transporteurs sont actifs en 24 à 48 heures.</span>
+          <span lang="es">Escríbenos y nuestro equipo te contacta en menos de 24 horas para completar el alta — la mayoría queda activa en 24–48 horas.</span>
         </p>
         <div class="quote-promise">
           <span class="qp-big"><span lang="en">Rolling in 24–48 h.</span><span lang="fr">En route en 24–48 h.</span><span lang="es">Rodando en 24–48 h.</span></span>
           <p><span lang="en">Prefer the phone? Call dispatch: (819) 238-8756.</span><span lang="fr">Vous préférez le téléphone? Appelez la répartition : (819) 238-8756.</span><span lang="es">¿Prefieres el teléfono? Llama al (819) 238-8756.</span></p>
         </div>
       </div>
-      <form class="quote-form" id="carrierForm">
-        <div class="qf-row">
-          <div class="qf-group">
-            <label for="cName"><span lang="en">Company / carrier name *</span><span lang="fr">Nom de l'entreprise / transporteur *</span><span lang="es">Nombre de la empresa *</span></label>
-            <input id="cName" type="text" placeholder="Transport ABC Inc." required />
-          </div>
-          <div class="qf-group">
-            <label for="cContact"><span lang="en">Contact name *</span><span lang="fr">Nom du contact *</span><span lang="es">Nombre de contacto *</span></label>
-            <input id="cContact" type="text" placeholder="Jean Tremblay" required />
-          </div>
-        </div>
-        <div class="qf-row">
-          <div class="qf-group">
-            <label for="cMC"><span lang="en">MC number *</span><span lang="fr">Numéro MC *</span><span lang="es">Número MC *</span></label>
-            <input id="cMC" type="text" placeholder="MC-000000" required />
-          </div>
-          <div class="qf-group">
-            <label for="cDOT"><span lang="en">DOT number</span><span lang="fr">Numéro DOT</span><span lang="es">Número DOT</span></label>
-            <input id="cDOT" type="text" placeholder="0000000" />
-          </div>
-        </div>
-        <div class="qf-row">
-          <div class="qf-group">
-            <label for="cEmail"><span lang="en">Email *</span><span lang="fr">Courriel *</span><span lang="es">Correo *</span></label>
-            <input id="cEmail" type="email" placeholder="dispatch@carrier.com" required />
-          </div>
-          <div class="qf-group">
-            <label for="cPhone"><span lang="en">Phone *</span><span lang="fr">Téléphone *</span><span lang="es">Teléfono *</span></label>
-            <input id="cPhone" type="tel" placeholder="(555) 000-0000" required />
-          </div>
-        </div>
-        <div class="qf-row">
-          <div class="qf-group">
-            <label for="cBase"><span lang="en">Home base / operating region *</span><span lang="fr">Base / région d'opération *</span><span lang="es">Base / región de operación *</span></label>
-            <input id="cBase" type="text" placeholder="Drummondville, QC" required />
-          </div>
-          <div class="qf-group">
-            <label for="cTrucks"><span lang="en">Number of trucks</span><span lang="fr">Nombre de camions</span><span lang="es">Número de camiones</span></label>
-            <input id="cTrucks" type="text" placeholder="5" />
-          </div>
+      <div class="quote-form">
+        <div class="qf-group">
+          <label><span lang="en">Carrier setup, by email</span><span lang="fr">Inscription transporteur, par courriel</span><span lang="es">Alta de transportistas, por correo</span></label>
+          <a class="btn" style="width:100%;" href="mailto:dispatch@koz.co?subject=Carrier%20setup"><span lang="en">Email dispatch@koz.co →</span><span lang="fr">Écrire à dispatch@koz.co →</span><span lang="es">Escribe a dispatch@koz.co →</span></a>
         </div>
         <div class="qf-group">
-          <span class="qf-group label" style="font-family:'IBM Plex Mono',Consolas,monospace;font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-soft);"><span lang="en">Equipment types</span><span lang="fr">Types d'équipement</span><span lang="es">Tipos de equipo</span></span>
-          <div class="eq-grid">
-            <label class="eq-item"><input type="checkbox" value="Dry Van" /><span lang="en">Dry Van</span><span lang="fr">Fourgon sec</span><span lang="es">Caja seca</span></label>
-            <label class="eq-item"><input type="checkbox" value="Reefer" /><span lang="en">Reefer</span><span lang="fr">Réfrigéré</span><span lang="es">Caja refrigerada</span></label>
-            <label class="eq-item"><input type="checkbox" value="Flatbed" /><span lang="en">Flatbed</span><span lang="fr">Plateau</span><span lang="es">Plataforma</span></label>
-            <label class="eq-item"><input type="checkbox" value="Step Deck" />Step Deck</label>
-            <label class="eq-item"><input type="checkbox" value="Container / Dray" /><span lang="en">Container / Dray</span><span lang="fr">Conteneur / Dray</span><span lang="es">Contenedor / Dray</span></label>
-            <label class="eq-item"><input type="checkbox" value="Power Only" />Power Only</label>
+          <a class="btn" style="width:100%;background:var(--ink);border-color:var(--ink);" href="tel:+18192388756"><span lang="en">Call (819) 238-8756</span><span lang="fr">Appelez le (819) 238-8756</span><span lang="es">Llama al (819) 238-8756</span></a>
+        </div>
+        <div class="qf-group" style="margin-bottom:0;">
+          <label><span lang="en">Include in your email</span><span lang="fr">À inclure dans votre courriel</span><span lang="es">Incluye en tu correo</span></label>
+          <div class="svc-points" style="margin-top:0.2rem;">
+            <div class="svc-point"><span class="sp-tick">01</span><p><span lang="en">Company name and MC / DOT numbers</span><span lang="fr">Nom de l'entreprise et numéros MC / DOT</span><span lang="es">Nombre de la empresa y números MC / DOT</span></p></div>
+            <div class="svc-point"><span class="sp-tick">02</span><p><span lang="en">Equipment types and number of trucks</span><span lang="fr">Types d'équipement et nombre de camions</span><span lang="es">Tipos de equipo y número de camiones</span></p></div>
+            <div class="svc-point"><span class="sp-tick">03</span><p><span lang="en">Home base and preferred lanes</span><span lang="fr">Base d'opération et corridors préférés</span><span lang="es">Base de operación y rutas preferidas</span></p></div>
+            <div class="svc-point"><span class="sp-tick">04</span><p><span lang="en">Contact name, email and phone</span><span lang="fr">Nom du contact, courriel et téléphone</span><span lang="es">Nombre de contacto, correo y teléfono</span></p></div>
           </div>
         </div>
-        <div class="qf-group">
-          <label for="cNotes"><span lang="en">Preferred lanes / notes</span><span lang="fr">Corridors préférés / notes</span><span lang="es">Rutas preferidas / notas</span></label>
-          <textarea id="cNotes" placeholder="QC ⇄ New England, weekly"></textarea>
-        </div>
-        <button type="submit" class="btn"><span lang="en">Send registration →</span><span lang="fr">Envoyer l'inscription →</span><span lang="es">Enviar registro →</span></button>
-        <p class="quote-alt">
-          <span lang="en">Opens your email to dispatch@koz.co — attach your COI &amp; W-9 if handy.</span>
-          <span lang="fr">Ouvre votre courriel vers dispatch@koz.co — joignez votre certificat d'assurance si possible.</span>
-          <span lang="es">Abre tu correo a dispatch@koz.co — adjunta tu certificado de seguro si lo tienes a mano.</span>
-        </p>
-      </form>
+      </div>
     </div>
   </div>
 </section>
@@ -302,7 +256,6 @@
         <ul>
           <li><a href="index.html#quote"><span lang="en">Request a quote</span><span lang="fr">Demander une soumission</span><span lang="es">Solicitar cotización</span></a></li>
           <li><a href="#register"><span lang="en">Become a carrier</span><span lang="fr">Devenir transporteur</span><span lang="es">Ser transportista</span></a></li>
-          <li><a href="portal.html"><span lang="en">Customer portal</span><span lang="fr">Portail client</span><span lang="es">Portal del cliente</span></a></li>
           <li><a href="services.html"><span lang="en">All services</span><span lang="fr">Tous les services</span><span lang="es">Todos los servicios</span></a></li>
         </ul>
       </div>
@@ -324,6 +277,6 @@
 
 
 <script src="lang.js"></script>
-<script src="koz.js?v=6"></script>
+<script src="koz.js?v=7"></script>
 </body>
 </html>

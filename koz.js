@@ -1,6 +1,6 @@
 /* ════════════════════════════════════════════════════════════
    KOZ TRANSIT — V2 CONCEPT · minimal JS
-   One signature motion (lane draw), mobile nav, honest quote form
+   Mobile nav, live stats, lane-draw signature motion
    ════════════════════════════════════════════════════════════ */
 
 /* ── Sticky header shadow ── */
@@ -69,53 +69,3 @@ if (laneMap && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   mapObserver.observe(laneMap);
   setTimeout(drawLanes, 2500);
 }
-
-/* ── Quote form: builds a real email to dispatch (no fake backend) ── */
-const quoteForm = document.getElementById('quoteForm');
-if (quoteForm) quoteForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const v = id => document.getElementById(id).value.trim();
-  const lang = (localStorage.getItem('kozLang') || 'en');
-  const subjects = {
-    en: 'Quote request — ' + v('qFrom') + ' to ' + v('qTo'),
-    fr: 'Demande de soumission — ' + v('qFrom') + ' vers ' + v('qTo'),
-    es: 'Solicitud de cotización — ' + v('qFrom') + ' a ' + v('qTo'),
-  };
-  const body = [
-    'From / De: ' + v('qFrom'),
-    'To / À: ' + v('qTo'),
-    '',
-    'Freight / Marchandise:',
-    v('qWhat'),
-    '',
-    'Reply to / Répondre à: ' + v('qEmail') + (v('qPhone') ? ' · ' + v('qPhone') : ''),
-  ].join('\n');
-  window.location.href = 'mailto:dispatch@koz.co'
-    + '?subject=' + encodeURIComponent(subjects[lang] || subjects.en)
-    + '&body=' + encodeURIComponent(body);
-});
-
-/* ── Carrier registration form: same honest mailto pattern ── */
-const carrierForm = document.getElementById('carrierForm');
-if (carrierForm) carrierForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const v = id => (document.getElementById(id) || { value: '' }).value.trim();
-  const equipment = [...carrierForm.querySelectorAll('.eq-item input:checked')]
-    .map(c => c.value).join(', ');
-  const body = [
-    'Company / Carrier: ' + v('cName'),
-    'Contact: ' + v('cContact'),
-    'MC #: ' + v('cMC') + (v('cDOT') ? ' · DOT #: ' + v('cDOT') : ''),
-    'Home base / region: ' + v('cBase'),
-    'Trucks: ' + v('cTrucks'),
-    'Equipment: ' + (equipment || 'n/a'),
-    '',
-    'Preferred lanes / notes:',
-    v('cNotes'),
-    '',
-    'Reply to: ' + v('cEmail') + (v('cPhone') ? ' · ' + v('cPhone') : ''),
-  ].join('\n');
-  window.location.href = 'mailto:dispatch@koz.co'
-    + '?subject=' + encodeURIComponent('Carrier registration — ' + v('cName') + ' (MC ' + v('cMC') + ')')
-    + '&body=' + encodeURIComponent(body);
-});

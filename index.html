@@ -7,7 +7,7 @@
   <meta name="description" content="KOZ Transit is a licensed Canada–USA freight broker in Stanstead, Québec — FTL, LTL and cross-border freight, quoted by a real person. MC-1634322-B · USDOT 4226239." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="koz.css?v=6" />
+  <link rel="stylesheet" href="koz.css?v=7" />
   <link rel="icon" type="image/svg+xml" href="assets/Orange.svg" />
   <link rel="apple-touch-icon" href="assets/Orange.png" />
   <meta name="theme-color" content="#E36314" />
@@ -52,7 +52,6 @@
         <li><a href="#carriers"><span lang="en">Carriers</span><span lang="fr">Transporteurs</span><span lang="es">Transportistas</span></a></li>
         <li><a href="#quote"><span lang="en">Quote</span><span lang="fr">Soumission</span><span lang="es">Cotización</span></a></li>
       </ul>
-      <a href="portal.html" class="nav-portal"><span lang="en">Portal</span><span lang="fr">Portail</span><span lang="es">Portal</span></a>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -84,7 +83,7 @@
       <a class="door door-ship" href="#quote">
         <span class="door-kicker"><span lang="en">Shippers</span><span lang="fr">Expéditeurs</span><span lang="es">Embarcadores</span></span>
         <span class="door-title"><span lang="en">I have freight</span><span lang="fr">J'ai de la marchandise</span><span lang="es">Tengo carga</span></span>
-        <span class="door-note"><span lang="en">Five fields. A human quotes you back within the hour, business hours.</span><span lang="fr">Cinq champs. Un humain vous répond avec un prix en moins d'une heure, aux heures ouvrables.</span><span lang="es">Cinco campos. Una persona te cotiza en menos de una hora, en horario de atención.</span></span>
+        <span class="door-note"><span lang="en">One email or call — a human quotes you back within the hour, business hours.</span><span lang="fr">Un courriel ou un appel — un humain vous répond avec un prix en moins d'une heure, aux heures ouvrables.</span><span lang="es">Un correo o una llamada — una persona te cotiza en menos de una hora, en horario de atención.</span></span>
         <span class="door-arrow">→</span>
       </a>
       <a class="door door-haul" href="#carriers">
@@ -344,7 +343,7 @@
     <div class="section-head">
       <span class="kicker">05 — <span lang="en">Quote</span><span lang="fr">Soumission</span><span lang="es">Cotización</span></span>
       <span class="line"></span>
-      <span class="kicker"><span lang="en">Five fields, no runaround</span><span lang="fr">Cinq champs, sans détour</span><span lang="es">Cinco campos, sin vueltas</span></span>
+      <span class="kicker"><span lang="en">No forms, no runaround</span><span lang="fr">Pas de formulaire, sans détour</span><span lang="es">Sin formularios, sin vueltas</span></span>
     </div>
     <div class="quote-layout">
       <div>
@@ -359,38 +358,24 @@
           <p><span lang="en">By a person, with a price — during business hours (ET). After hours, first thing next morning.</span><span lang="fr">Par une personne, avec un prix — aux heures ouvrables (HE). Après les heures, à la première heure le lendemain.</span><span lang="es">Por una persona, con un precio — en horario de atención (hora del Este). Fuera de horario, a primera hora del día siguiente.</span></p>
         </div>
       </div>
-      <form class="quote-form" id="quoteForm">
-        <div class="qf-row">
-          <div class="qf-group">
-            <label for="qFrom"><span lang="en">From (city, prov/state) *</span><span lang="fr">De (ville, prov./état) *</span><span lang="es">Desde (ciudad, prov./estado) *</span></label>
-            <input id="qFrom" type="text" placeholder="Sherbrooke, QC" required />
-          </div>
-          <div class="qf-group">
-            <label for="qTo"><span lang="en">To (city, prov/state) *</span><span lang="fr">À (ville, prov./état) *</span><span lang="es">Hasta (ciudad, prov./estado) *</span></label>
-            <input id="qTo" type="text" placeholder="Boston, MA" required />
-          </div>
+      <div class="quote-form">
+        <div class="qf-group">
+          <label><span lang="en">The direct line</span><span lang="fr">La ligne directe</span><span lang="es">La línea directa</span></label>
+          <a class="btn" style="width:100%;" href="mailto:dispatch@koz.co?subject=Quote%20request"><span lang="en">Email dispatch@koz.co →</span><span lang="fr">Écrire à dispatch@koz.co →</span><span lang="es">Escribe a dispatch@koz.co →</span></a>
         </div>
         <div class="qf-group">
-          <label for="qWhat"><span lang="en">The freight (what, weight, when) *</span><span lang="fr">La marchandise (quoi, poids, quand) *</span><span lang="es">La carga (qué, peso, cuándo) *</span></label>
-          <textarea id="qWhat" placeholder="22 pallets of baled plastic, 42,000 lb, ships Thursday" required></textarea>
+          <a class="btn" style="width:100%;background:var(--ink);border-color:var(--ink);" href="tel:+18192388756"><span lang="en">Call (819) 238-8756</span><span lang="fr">Appelez le (819) 238-8756</span><span lang="es">Llama al (819) 238-8756</span></a>
         </div>
-        <div class="qf-row">
-          <div class="qf-group">
-            <label for="qEmail"><span lang="en">Your email *</span><span lang="fr">Votre courriel *</span><span lang="es">Tu correo *</span></label>
-            <input id="qEmail" type="email" placeholder="you@company.com" required />
-          </div>
-          <div class="qf-group">
-            <label for="qPhone"><span lang="en">Phone (optional)</span><span lang="fr">Téléphone (facultatif)</span><span lang="es">Teléfono (opcional)</span></label>
-            <input id="qPhone" type="tel" placeholder="(555) 000-0000" />
+        <div class="qf-group" style="margin-bottom:0;">
+          <label><span lang="en">What to include</span><span lang="fr">Quoi inclure</span><span lang="es">Qué incluir</span></label>
+          <div class="svc-points" style="margin-top:0.2rem;">
+            <div class="svc-point"><span class="sp-tick">01</span><p><span lang="en">Origin and destination (city, prov/state)</span><span lang="fr">Origine et destination (ville, prov./État)</span><span lang="es">Origen y destino (ciudad, prov./estado)</span></p></div>
+            <div class="svc-point"><span class="sp-tick">02</span><p><span lang="en">The freight — what it is, weight, equipment</span><span lang="fr">La marchandise — quoi, poids, équipement</span><span lang="es">La carga — qué es, peso, equipo</span></p></div>
+            <div class="svc-point"><span class="sp-tick">03</span><p><span lang="en">When it ships</span><span lang="fr">Quand ça part</span><span lang="es">Cuándo sale</span></p></div>
+            <div class="svc-point"><span class="sp-tick">04</span><p><span lang="en">Your name and callback number</span><span lang="fr">Votre nom et numéro de rappel</span><span lang="es">Tu nombre y número de contacto</span></p></div>
           </div>
         </div>
-        <button type="submit" class="btn"><span lang="en">Send it to dispatch →</span><span lang="fr">Envoyer à la répartition →</span><span lang="es">Mándalo a dispatch →</span></button>
-        <p class="quote-alt">
-          <span lang="en">Opens your email to dispatch@koz.co · <a href="tel:+18192388756">or call (819) 238-8756</a></span>
-          <span lang="fr">Ouvre votre courriel vers dispatch@koz.co · <a href="tel:+18192388756">ou appelez (819) 238-8756</a></span>
-          <span lang="es">Abre tu correo a dispatch@koz.co · <a href="tel:+18192388756">o llama al (819) 238-8756</a></span>
-        </p>
-      </form>
+      </div>
     </div>
   </div>
 </section>
@@ -412,7 +397,6 @@
         <ul>
           <li><a href="#quote"><span lang="en">Request a quote</span><span lang="fr">Demander une soumission</span><span lang="es">Solicitar cotización</span></a></li>
           <li><a href="carriers.html#register"><span lang="en">Become a carrier</span><span lang="fr">Devenir transporteur</span><span lang="es">Ser transportista</span></a></li>
-          <li><a href="portal.html"><span lang="en">Customer portal</span><span lang="fr">Portail client</span><span lang="es">Portal del cliente</span></a></li>
           <li><a href="services.html"><span lang="en">All services</span><span lang="fr">Tous les services</span><span lang="es">Todos los servicios</span></a></li>
         </ul>
       </div>
@@ -439,6 +423,6 @@
 {"generated_at":"2026-08-20T21:22:05.281Z","states_provinces_total":38,"cities_served":276,"regions":{"QC":1638,"GA":519,"TX":363,"MA":110,"CA":82,"FL":81,"PA":81,"ON":70,"OH":62,"NY":57,"ME":57,"KY":39,"IN":34,"MI":34,"NJ":28,"WI":26,"NB":21,"AL":17,"WA":16,"NC":14,"BC":14,"TN":13,"MD":12,"MN":9,"SD":9,"IL":9,"CT":8,"RI":5,"NE":4,"MO":4,"IA":4,"NH":3,"SC":3,"CO":3,"AR":2,"VT":1,"OK":1,"KS":1}}
 </script>
 <script src="lang.js"></script>
-<script src="koz.js?v=6"></script>
+<script src="koz.js?v=7"></script>
 </body>
 </html>
