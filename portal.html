@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Portal — KOZ Transit</title>
+  <meta name="description" content="The KOZ Transit customer portal — live tracking, documents and shipment history, powered by our WagOn operations system." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="koz.css?v=6" />
+  <link rel="icon" type="image/svg+xml" href="assets/Orange.svg" />
+  <link rel="apple-touch-icon" href="assets/Orange.png" />
+  <meta name="theme-color" content="#E36314" />
+  <link rel="canonical" href="https://koz.co/portal.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KOZ Transit" />
+  <meta property="og:title" content="Customer Portal — KOZ Transit" />
+  <meta property="og:description" content="The KOZ Transit customer portal — live tracking, documents and shipment history, powered by our WagOn operations system." />
+  <meta property="og:url" content="https://koz.co/portal.html" />
+  <meta property="og:image" content="https://koz.co/assets/Orange.png" />
+  <meta name="twitter:card" content="summary" />
+</head>
+<body>
+
+<!-- ══════════ TOP BAR + HEADER — one sticky unit ══════════ -->
+<div class="site-top">
+<div class="topbar">
+  <div class="wrap">
+    <span class="tb-item">MC <b>1634322</b></span>
+    <span class="tb-item">USDOT <b>4226239</b></span>
+    <span class="tb-item tb-hide-sm"><span lang="en">Bonded &amp; insured</span><span lang="fr">Cautionné et assuré</span><span lang="es">Afianzado y asegurado</span></span>
+    <span class="tb-item tb-phone"><a href="tel:+18192388756">(819) 238-8756</a></span>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ HEADER ══════════ -->
+<header class="site" id="header">
+  <div class="wrap">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/Logo_KTI.png" alt="KOZ Transit" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><span lang="en">Home</span><span lang="fr">Accueil</span><span lang="es">Inicio</span></a></li>
+        <li><a href="services.html"><span lang="en">Services</span><span lang="fr">Services</span><span lang="es">Servicios</span></a></li>
+        <li><a href="carriers.html"><span lang="en">Carriers</span><span lang="fr">Transporteurs</span><span lang="es">Transportistas</span></a></li>
+        <li><a href="index.html#quote"><span lang="en">Quote</span><span lang="fr">Soumission</span><span lang="es">Cotización</span></a></li>
+      </ul>
+      <a href="portal.html" class="nav-portal"><span lang="en">Portal</span><span lang="fr">Portail</span><span lang="es">Portal</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+</div>
+
+<!-- ══════════ PAGE HERO ══════════ -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="hero-meta">
+      <span><span lang="en">Customer portal</span><span lang="fr">Portail client</span><span lang="es">Portal de clientes</span></span>
+      <span><span lang="en">Powered by WagOn</span><span lang="fr">Propulsé par WagOn</span><span lang="es">Impulsado por WagOn</span></span>
+    </div>
+    <h1><span lang="en">Your freight, <span style="color:var(--orange);">on screen.</span></span><span lang="fr">Vos marchandises, <span style="color:var(--orange);">à l'écran.</span></span><span lang="es">Tu carga, <span style="color:var(--orange);">en pantalla.</span></span></h1>
+    <p class="hero-sub">
+      <span lang="en">The KOZ portal connects straight to <strong>WagOn</strong>, the system our dispatch runs on — so what you see is what we see: live load status, documents, and shipment history.</span>
+      <span lang="fr">Le portail KOZ se branche directement sur <strong>WagOn</strong>, le système sur lequel roule notre répartition — vous voyez donc ce qu'on voit : statut des charges en direct, documents et historique d'expéditions.</span>
+      <span lang="es">El portal de KOZ se conecta directo a <strong>WagOn</strong>, el sistema con el que trabaja nuestro dispatch — así que ves lo que nosotros vemos: estatus en vivo, documentos e historial de envíos.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ PORTAL STATUS ══════════ -->
+<section class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker"><span lang="en">Status</span><span lang="fr">Statut</span><span lang="es">Estatus</span></span>
+      <span class="line"></span>
+      <span class="kicker"><span lang="en">Connection in progress</span><span lang="fr">Branchement en cours</span><span lang="es">Conexión en curso</span></span>
+    </div>
+    <div class="quote-layout">
+      <div>
+        <h2><span lang="en">Rolling out <span style="color:var(--orange);">with WagOn.</span></span><span lang="fr">En route <span style="color:var(--orange);">avec WagOn.</span></span><span lang="es">En camino <span style="color:var(--orange);">con WagOn.</span></span></h2>
+        <p>
+          <span lang="en">We're wiring the portal to our live operations data rather than shipping a hollow shell. Until it opens, your dispatcher is your portal — one call or email gets you anything below.</span>
+          <span lang="fr">On branche le portail sur nos données d'opérations réelles plutôt que de livrer une coquille vide. D'ici l'ouverture, votre répartiteur est votre portail — un appel ou un courriel vous donne tout ce qui suit.</span>
+          <span lang="es">Estamos conectando el portal a nuestros datos reales de operación en lugar de lanzar un cascarón vacío. Mientras abre, tu despachador es tu portal — una llamada o un correo te consigue todo lo de abajo.</span>
+        </p>
+        <div class="border-points">
+          <div class="border-point">
+            <span class="bp-stamp"><span lang="en">Coming</span><span lang="fr">À venir</span><span lang="es">Próximamente</span></span>
+            <p><span lang="en">Live load status and ETAs, straight from dispatch.</span><span lang="fr">Statut des charges et heures d'arrivée en direct, directement de la répartition.</span><span lang="es">Estatus de cargas y ETAs en vivo, directo de dispatch.</span></p>
+          </div>
+          <div class="border-point">
+            <span class="bp-stamp"><span lang="en">Coming</span><span lang="fr">À venir</span><span lang="es">Próximamente</span></span>
+            <p><span lang="en">BOL, POD and invoice downloads per shipment.</span><span lang="fr">Téléchargement des connaissements, preuves de livraison et factures par expédition.</span><span lang="es">Descarga de BOL, POD y facturas por envío.</span></p>
+          </div>
+          <div class="border-point">
+            <span class="bp-stamp"><span lang="en">Today</span><span lang="fr">Aujourd'hui</span><span lang="es">Hoy</span></span>
+            <p><span lang="en">Everything above, by direct line: <a href="mailto:dispatch@koz.co" style="color:var(--orange-deep);text-decoration:underline;">dispatch@koz.co</a> · <a href="tel:+18192388756" style="color:var(--orange-deep);text-decoration:underline;">(819) 238-8756</a></span><span lang="fr">Tout ce qui précède, par ligne directe : <a href="mailto:dispatch@koz.co" style="color:var(--orange-deep);text-decoration:underline;">dispatch@koz.co</a> · <a href="tel:+18192388756" style="color:var(--orange-deep);text-decoration:underline;">(819) 238-8756</a></span><span lang="es">Todo lo anterior, por línea directa: <a href="mailto:dispatch@koz.co" style="color:var(--orange-deep);text-decoration:underline;">dispatch@koz.co</a> · <a href="tel:+18192388756" style="color:var(--orange-deep);text-decoration:underline;">(819) 238-8756</a></span></p>
+          </div>
+        </div>
+      </div>
+      <div class="carrier-cta" style="border-color:var(--hairline);">
+        <span class="mono-line" style="color:var(--ink-soft);"><span lang="en">Meanwhile</span><span lang="fr">En attendant</span><span lang="es">Mientras tanto</span></span>
+        <p style="font-size:0.95rem;">
+          <span lang="en">Freight to move today? The quote line is open — a human answers within the hour, business hours.</span>
+          <span lang="fr">De la marchandise à déplacer aujourd'hui? La ligne des soumissions est ouverte — un humain vous répond en moins d'une heure, aux heures ouvrables.</span>
+          <span lang="es">¿Carga que mover hoy? La línea de cotizaciones está abierta — una persona responde en menos de una hora, en horario de atención.</span>
+        </p>
+        <a class="btn" href="index.html#quote"><span lang="en">Get a quote →</span><span lang="fr">Demander une soumission →</span><span lang="es">Cotiza ahora →</span></a>
+        <span class="mono-line" style="color:var(--ink-soft);">dispatch@koz.co · (819) 238-8756</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/Logo_KTI.png" alt="KOZ Transit" />
+        <p class="footer-legal">
+          Koz Transit Inc.<br/>
+          14 Rue Terrill, Stanstead, QC J0B 3E0, Canada<br/>
+          MC <b>1634322</b> · USDOT <b>4226239</b> · NEQ <b>1179604864</b>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="en">Get moving</span><span lang="fr">En route</span><span lang="es">En marcha</span></h5>
+        <ul>
+          <li><a href="index.html#quote"><span lang="en">Request a quote</span><span lang="fr">Demander une soumission</span><span lang="es">Solicitar cotización</span></a></li>
+          <li><a href="carriers.html#register"><span lang="en">Become a carrier</span><span lang="fr">Devenir transporteur</span><span lang="es">Ser transportista</span></a></li>
+          <li><a href="services.html"><span lang="en">All services</span><span lang="fr">Tous les services</span><span lang="es">Todos los servicios</span></a></li>
+          <li><a href="index.html"><span lang="en">Home</span><span lang="fr">Accueil</span><span lang="es">Inicio</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="en">Reach us</span><span lang="fr">Nous joindre</span><span lang="es">Contáctenos</span></h5>
+        <ul>
+          <li><a href="tel:+18192388756">(819) 238-8756</a></li>
+          <li><a href="mailto:dispatch@koz.co">dispatch@koz.co</a></li>
+          <li><a href="mailto:invoice@koz.co">invoice@koz.co</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Koz Transit Inc. <span lang="en">Licensed freight broker.</span><span lang="fr">Courtier en transport agréé.</span><span lang="es">Corredor de carga con licencia.</span></span>
+      <span class="merci">Merci ▪ Thank you ▪ Gracias</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="lang.js"></script>
+<script src="koz.js?v=6"></script>
+</body>
+</html>
