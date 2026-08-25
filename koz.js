@@ -23,6 +23,19 @@ navLinks.querySelectorAll('a').forEach(a =>
   })
 );
 
+/* orange leading-edge sweep on every page entrance */
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const sweep = () => {
+    const d = document.createElement('div');
+    d.className = 'page-sweep';
+    document.body.appendChild(d);
+    d.addEventListener('animationend', () => d.remove());
+  };
+  if ('onpagereveal' in window) window.addEventListener('pagereveal', sweep, { once: true });
+  else sweep();
+})();
+
 /* view-transition support flag (suppresses the CSS fallback entrance) */
 if (document.startViewTransition) document.documentElement.classList.add('vt');
 
