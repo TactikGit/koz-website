@@ -23,6 +23,9 @@ navLinks.querySelectorAll('a').forEach(a =>
   })
 );
 
+/* view-transition support flag (suppresses the CSS fallback entrance) */
+if (document.startViewTransition) document.documentElement.classList.add('vt');
+
 /* ── Mark the current page in the nav ── */
 const herePage = location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a').forEach(a => {

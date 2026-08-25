@@ -611,11 +611,17 @@ footer.site h5 {
 @view-transition { navigation: auto; }
 .site-top { view-transition-name: site-top; }
 @media (prefers-reduced-motion: no-preference) {
-  ::view-transition-old(root) { animation: page-out 0.16s ease both; }
-  ::view-transition-new(root) { animation: page-in 0.26s ease both; }
+  ::view-transition-old(root) { animation: page-out 0.22s ease both; }
+  ::view-transition-new(root) { animation: page-wipe 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  /* fallback entrance for browsers without view transitions (html gets .vt when supported) */
+  html:not(.vt) body { animation: page-in-fb 0.42s cubic-bezier(0.2, 0.7, 0.2, 1); }
 }
-@keyframes page-out { to { opacity: 0; } }
-@keyframes page-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes page-out { to { opacity: 0; transform: translateY(10px); } }
+@keyframes page-wipe {
+  from { clip-path: inset(0 0 100% 0); transform: translateY(12px); }
+  to { clip-path: inset(0); transform: none; }
+}
+@keyframes page-in-fb { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
 .hero h1 .reveal {
   display: inline-block;
