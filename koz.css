@@ -134,8 +134,12 @@ header.site.scrolled { box-shadow: 0 3px 0 rgba(25,29,35,0.08); }
   font-size: 0.72rem; font-weight: 600;
   letter-spacing: 0.1em; text-transform: uppercase;
 }
-.nav-links a { padding: 0.3rem 0; border-bottom: 2px solid transparent; }
-.nav-links a:hover { border-bottom-color: var(--orange); color: var(--orange-deep); }
+.nav-links a {
+  padding: 0.3rem 0 0.35rem;
+  background: linear-gradient(var(--orange), var(--orange)) left bottom / 0% 2px no-repeat;
+  transition: background-size 0.22s ease, color 0.15s ease;
+}
+.nav-links a:hover, .nav-links a.active { background-size: 100% 2px; color: var(--orange-deep); }
 .nav-portal {
   border: 2px solid var(--rule);
   padding: 0.45rem 0.9rem;
@@ -600,6 +604,19 @@ footer.site h5 {
 }
 
 /* ════════════════ MOTION ════════════════ */
+
+/* Page-to-page: soft cross-document transitions (supporting browsers only).
+   The sticky topbar+header keep their own transition name, so they read as
+   fixed letterhead while the page content lifts in beneath them. */
+@view-transition { navigation: auto; }
+.site-top { view-transition-name: site-top; }
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) { animation: page-out 0.16s ease both; }
+  ::view-transition-new(root) { animation: page-in 0.26s ease both; }
+}
+@keyframes page-out { to { opacity: 0; } }
+@keyframes page-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
 .hero h1 .reveal {
   display: inline-block;
   transform: translateY(0.55em);
